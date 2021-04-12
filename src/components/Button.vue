@@ -4,7 +4,7 @@
 		@click="onClick()"
 		:style="{background: color}"
 	> 
-		{{ title }} 
+		{{ text }} 
 	</button>
 </template>
 
@@ -12,7 +12,7 @@
 export default {
 	name: 'Button',
 	props:{
-		title:{
+		text:{
 			type: String,
 			required:true,
 		},
@@ -23,7 +23,7 @@ export default {
 	},
 	methods:{
 		onClick(){
-			this.$emit('toggle-add-task')
+			this.$emit('btn-click');
 		}
 	}
 }
