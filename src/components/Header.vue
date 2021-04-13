@@ -24,7 +24,12 @@ export default {
 	},
 	emits:[
 		'toggle-add-task',
-	]
+	],
+	computed:{
+		homePage(){
+			return this.$route.path === '/';
+		}
+	}
 }
 </script>
 
